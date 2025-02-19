@@ -25,25 +25,6 @@
                
             </div>
 
-<!-- Change Color Section -->
-            <div class="content-box">
-                <button onclick="changeColor()">Change Color</button>
-                <!-- javascript code -->
-                <script type="text/javascript">
-                    function changeColor() {
-                        console.log("attempting to change color of text, current color is: ", document.body.style.backgroundColor)
-                        if(document.body.style.backgroundColor == 'green') {
-                            document.body.style.backgroundColor = 'lightblue';
-                        } else {
-                            document.body.style.backgroundColor = 'green';
-                        }
-                        console.log("successfully changed color of text, new color is: ", document.body.style.backgroundColor)
-
-
-                    }
-                </script>
-            </div>
-
 <!-- Text Tester Section -->
             <div class="content-box">
                 <form name="validateForm" onsubmit="validate()">
@@ -65,6 +46,25 @@
                  </script>
             
             </div>
+
+<!-- Change Color Section -->
+<div class="content-box">
+    <button onclick="changeColor()">Change Color</button>
+    <!-- javascript code -->
+    <script type="text/javascript">
+        function changeColor() {
+            console.log("attempting to change color of text, current color is: ", document.body.style.backgroundColor)
+            if(document.body.style.backgroundColor == 'green') {
+                document.body.style.backgroundColor = 'lightblue';
+            } else {
+                document.body.style.backgroundColor = 'green';
+            }
+            console.log("successfully changed color of text, new color is: ", document.body.style.backgroundColor)
+
+
+        }
+    </script>
+</div>
 
 <!-- Text Section -->
             <div class="content-box">
