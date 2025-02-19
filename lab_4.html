@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>INST377 - Lab 4</title>
+        <link rel="stylesheet" href="lab_4.css">
+    </head>
+
+    <body id="background">
+        <h1 id="header1">INST377 Lab 4</h1>
+
+        <div class="container">
+
+<!-- Alert Me Section -->
+            <div class="content-box">
+                <form name="alertForm" onsubmit="alertUser()">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <input type="submit" value="Alert Me!">
+                </form>
+                <!-- javascript code -->
+                <script type="text/javascript">
+                    function alertUser() {
+                        alert('Hi ' + document.alertForm.name.value)
+                    }
+                </script>
+               
+            </div>
+
+<!-- Change Color Section -->
+            <div class="content-box">
+                <button onclick="changeColor()">Change Color</button>
+                <!-- javascript code -->
+                <script type="text/javascript">
+                    function changeColor() {
+                        console.log("attempting to change color of text, current color is: ", document.body.style.backgroundColor)
+                        if(document.body.style.backgroundColor == 'green') {
+                            document.body.style.backgroundColor = 'lightblue';
+                        } else {
+                            document.body.style.backgroundColor = 'green';
+                        }
+                        console.log("successfully changed color of text, new color is: ", document.body.style.backgroundColor)
+
+
+                    }
+                </script>
+            </div>
+
+<!-- Text Tester Section -->
+            <div class="content-box">
+                <form name="validateForm" onsubmit="validate()">
+                    <label for="textTest">Text Tester:</label>
+                    <input type="text" id="textTest" required>
+                    <input type="submit" value="Validate Text">
+                </form>
+                <!-- javascript code -->
+                 <script>
+                        function validate() {
+                            console.log('validating user input')
+                            var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                            if(validation.test(document.validateForm.textTest.value)) {
+                                alert("There is special characters, this text is not valid.")
+                            } else {
+                                console.log('this text is valid')
+                            }
+                        }
+                 </script>
+            
+            </div>
+
+<!-- Text Section -->
+            <div class="content-box">
+                <button onclick="addText()">Add Text</button>
+            </div>
+            <!-- javascript code -->
+          <script>
+            function addText() {
+                const header1 = document.getElementById('header1');
+                header1.textContent += " Add Text";
+            }
+
+          </script>
+        </div>
+
+    </body>
+</html>
